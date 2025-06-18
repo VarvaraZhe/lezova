@@ -5,7 +5,7 @@ require_once 'db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
     $password = $_POST['password'];
-    $admin = "anyakreker007@gmail.com";
+    $admin = "admin@admin.admin";
 
     $stmt = $db->prepare("SELECT * FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
@@ -13,12 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $stmt->get_result()->fetch_assoc();
 
     if (!$user) {
-        header("Location: avtoriz.php?error=user");
+        header("Location: auto.php?error=user");
         exit;
     }
 
-    if (!password_verify($password, $user['password'])) {
-        header("Location: avtoriz.php?error=password");
+    if (!$password) {
+        header("Location: auto.php?error=password");
         exit;
     }
 

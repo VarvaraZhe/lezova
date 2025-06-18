@@ -18,7 +18,7 @@ require_once 'style.php';
         <div><?= $error ?></div>
     <?php endif; ?>
     
-    <form action="avtor.php" method="post">
+    <form action="autowork.php" method="post">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Пароль" required>
         <button type="submit">Войти</button>

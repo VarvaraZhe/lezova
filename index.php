@@ -9,10 +9,10 @@ session_start();
   <title>Главная</title>
 </head>
 <body>
-  <div class="container">
+    <div class="container">
     <h2>Добро пожаловать!</h2>
-    <a href="avtoriz.php"><button>Войти</button></a>
-    <a href="registration.php"><button>Регистрация</button></a>
+    <a href="auto.php"><button>Войти</button></a>
+    <a href="reg.php"><button>Регистрация</button></a>
   </div>
 </body>
 </html>
